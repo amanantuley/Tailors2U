@@ -1,0 +1,38 @@
+mixin PriceItem(config, ...items)
+  .col-md-4.pt-4.px-md-2.px-lg-3
+    .card.h-100.px-lg-5.card-span&attributes(attributes)
+      .card-body.d-flex.flex-column.justify-content-around
+        .text-center.pt-5
+          img(src=`${CWD}assets/img/icons/${config.image}` alt='...' ).img-fluid 
+          h5.my-4=config.title
+    
+        p=config.text  
+        ul.list-unstyled
+          each item in items      
+            li.mb-2
+              span.me-2
+                i.fas.fa-circle.text-primary(style="font-size:.5rem")
+              =item 
+        .text-center.my-5
+          if config.hasBtnOutline
+            .d-grid
+              button.btn.btn-outline-danger(type='submit') Learn more 
+          else
+            .d-grid  
+             button.btn.btn-danger.hover-top.btn-glow.border-0(type='submit') Learn more
+                  
+mixin Services
+  +Section#services('container-xl').py-7
+    .row.justify-content-center
+      .col-md-8.col-lg-5.text-center.mb-3
+        h5.text-danger SERVICES
+        h2 Our services for you
+    .row.h-100.justify-content-center
+      
+      - const p1 = {title:'Business Services', image: 'services-1.svg',text:'Offering home delivery around the city, where your products will be at your doorstep within 48-72 hours.',  hasBtnOutline: true}
+      - const p2 = {title:'Statewide Services',text:'', image: 'services-2.svg',text:'Offering home delivery around the city, where your products will be at your doorstep within 48-72 hours.', hasBtnOutline: false }  
+      - const p3 = {title:'Personal Services', image: 'services-3.svg',text:'You can trust us to safely deliver your most sensitive documents to the specific area in a short time.', hasBtnOutline: true}
+
+      +PriceItem(p1, 'Corporate goods ','Shipment', 'Accesories')
+      +PriceItem(p2, 'Unlimited Bandwidth ', 'Encrypted Connection', 'Yes Traffic Logs')
+      +PriceItem(p3, 'Unlimited Bandwidth ', 'Encrypted Connection', 'Yes Traffic Logs')

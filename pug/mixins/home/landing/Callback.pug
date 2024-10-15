@@ -1,0 +1,23 @@
+mixin Callback 
+  +Section 
+    .row.justify-content-center
+      .col-md-6.col-lg-5.col-xl-4
+        img(src=`${CWD}assets/img/illustrations/callback.png` alt='...' )
+        h5.text-danger REQUEST A CALLBACK
+        h2 We will contact in the shortest time.
+        p.text-muted Monday to Friday, 9am-5pm.
+      .col-md-6.col-lg-5.col-xl-4
+        form.row
+          .mb-3
+            label.form-label.visually-hidden(for='inputName') Name
+            input.form-control.form-quriar-control#inputName(type='text' placeholder='Name')
+          .mb-3
+            label.form-label.visually-hidden(for='inputEmail') Another label
+            input.form-control.form-quriar-control#inputEmail(type='email' placeholder='Email')
+          .mb-5
+            label.form-label.visually-hidden(for='validationTextarea') Message
+            textarea.form-control.form-quriar-control.is-invalid.border-400#validationTextarea(placeholder='Message' style='height: 150px' required)
+          
+          .d-grid 
+            button.btn.btn-primary(type="submit") Send Message
+              i.fas.fa-paper-plane.ms-2

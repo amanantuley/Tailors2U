@@ -1,0 +1,17 @@
+mixin Cta 
+  +Section.bg-1000
+    .row 
+      .col-lg-6
+        h2.fw-bold.text-white Get an update every week
+        p.text-300 We ensure that your product is delivered in the safest possible
+          br
+          | manner, at the correct location, at the right time.
+      .col-lg-6 
+        h5.text-primary.mb-3 SUBSCRIBE TO NEWSLETTER  
+        form.row.gx-2.gy-2.align-items-center
+          .col
+            .input-group-icon
+              label.visually-hidden(for='inputEmailCta') Address
+              input.form-control#inputEmailCta.input-box.form-quriar-control.text-light(type='email' placeholder='Enter your mail')
+          .d-grid.gap-3.col-sm-auto
+            button.btn.btn-danger(type='submit') Subscribe

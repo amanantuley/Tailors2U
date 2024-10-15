@@ -1,0 +1,72 @@
+mixin Items(config)
+  .col-md-4.mb-3.mb-md-0
+    .card.h-100.card-span.p-3
+      .card-body
+        h5.mb-0.text-primary Fantastic service!
+        p.card-text.pt-3=config.text
+        .d-xl-flex.justify-content-between.align-items-center
+          .d-flex.align-items-center.mb-3
+            i.fas.fa-star.text-primary.me-1
+            i.fas.fa-star.text-primary.me-1
+            i.fas.fa-star.text-primary.me-1
+            i.fas.fa-star.text-primary.me-1
+            i.fas.fa-star.text-primary.me-1
+           
+          .d-flex.align-items-center
+            img(src=`${CWD}assets/img/icons/${config.image}` alt='').img-fluid
+            .flex-1.ms-3
+              h6.mb-0.fs--1.text-1000.fw-medium=config.name 
+              p.fs--2.fw-normal.mb-0=config.country
+         
+
+mixin Testimonial
+  +Section('container-fluid').py-7
+    .row.flex-center
+      +Background({image: `${CWD}assets/img/gallery/quote.png`, attrs: { style: { 'background-position': 'top', 'background-size': 'auto', 'margin-left': '-270px','margin-top': '-45px',} }, className: 'bg-size' })
+      .col-md-8.col-lg-5.text-center
+        h5.text-danger TESTIMONIAL
+        h2 Our Awesome Clients
+    
+    #carouselExampleDark.carousel.slide(data-bs-ride='carousel').pt-6
+      .carousel-inner
+        .carousel-item.active(data-bs-interval='10000')
+          .row.h-100
+            +Items({image: 'avatar.png', name:'Yves Tanguy',country:'Chief Executive, DLF',
+              text:'I purchased a phone from an e-commerce site, and this courier service provider assisted me in getting it delivered to my home. I received my phone within one day, and I was really satisfied with their service when I received it. ',
+            })
+            +Items({image: 'avatar.png', name:'Kim Young Jou',country:'Chief Executive, DLF',
+              text:'I purchased a phone from an e-commerce site, and this courier service provider assisted me in getting it delivered to my home. I received my phone within one day, and I was really satisfied with their service when I received it.',
+            })
+            +Items({image: 'avatar.png', name:'Yves Tanguy',country:'Chief Executive, DLF',
+              text:'I purchased a phone from an e-commerce site, and this courier service provider assisted me in getting it delivered to my home. I received my phone within one day, and I was really satisfied with their service when I received it. .',
+            })
+        .carousel-item(data-bs-interval='2000')
+          .row.h-100
+            +Items({image: 'avatar.png', name:'Yves Tanguy',country:'Chief Executive, DLF',
+              text:'I purchased a phone from an e-commerce site, and this courier service provider assisted me in getting it delivered to my home. I received my phone within one day, and I was really satisfied with their service when I received it. ',
+            })
+            +Items({image: 'avatar.png', name:'Kim Young Jou',country:'Chief Executive, DLF', 
+              text:'I purchased a phone from an e-commerce site, and this courier service provider assisted me in getting it delivered to my home. I received my phone within one day, and I was really satisfied with their service when I received it. ',
+            })
+            +Items({image: 'avatar.png', name:'Yves Tanguy',country:'Chief Executive, DLF',
+              text:'I purchased a phone from an e-commerce site, and this courier service provider assisted me in getting it delivered to my home. I received my phone within one day, and I was really satisfied with their service when I received it. .',
+            })
+
+        .carousel-item
+          .row.h-100
+            +Items({image: 'avatar.png', name:'Yves Tanguy',country:'Chief Executive, DLF',
+              text:'I purchased a phone from an e-commerce site, and this courier service provider assisted me in getting it delivered to my home. I received my phone within one day, and I was really satisfied with their service when I received it. ',
+            })
+            +Items({image: 'avatar.png', name:'Kim Young Jou',country:'Chief Executive, DLF',
+              text:'“I purchased a phone from an e-commerce site, and this courier service provider assisted me in getting it delivered to my home. I received my phone within one day, and I was really satisfied with their service when I received it. ',
+            })
+            +Items({image: 'avatar.png', name:'Yves Tanguy',country:'Chief Executive, DLF',
+              text:'I purchased a phone from an e-commerce site, and this courier service provider assisted me in getting it delivered to my home. I received my phone within one day, and I was really satisfied with their service when I received it. .',
+            })
+
+      .row.px-3.px-md-0.mt-6
+        .col-12.position-relative
+          ol.carousel-indicators
+            li.active(data-bs-target='#carouselExampleDark' data-bs-slide-to='0')
+            li(data-bs-target='#carouselExampleDark' data-bs-slide-to='1')
+            li(data-bs-target='#carouselExampleDark' data-bs-slide-to='2')

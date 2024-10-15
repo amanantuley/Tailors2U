@@ -1,0 +1,44 @@
+mixin FindUs
+  +Section#findUs 
+    .row.justify-content-center
+      .col-md-8.col-lg-5.mb-6.text-center
+        h5.text-danger FIND US
+        h2 Access us easily
+      .col-12
+        .card.card-span.rounded-2.mb-3
+          .row
+            .col-md-6.col-lg-7.d-flex
+              img.w-100.fit-cover.rounded-md-start.rounded-top.rounded-md-top-0(src=`${CWD}assets/img/gallery/map.svg` alt='map' )
+            .col-md-6.col-lg-5.d-flex.flex-center
+              .card-body
+                h5 Contact with us
+                p.text-700.my-4 
+                  i.fas.fa-map-marker-alt.text-warning.me-3
+                  span 2277 Lorem Ave, San Diego, CA 22553
+
+                p
+                  i.fas.fa-phone-alt.text-warning.me-3
+                  span.text-700 Monday - Friday: 10 am - 10pm
+                    br
+                    span.ps-4 Sunday: 11 am - 9pm  
+
+                p
+                  i.fas.fa-envelope.text-warning.me-3 
+                  a(href='mailto:vctung@outlook.com').text-700  info@quriarbox.com
+
+                ul.list-unstyled.list-inline.mt-5
+                  li.list-inline-item
+                    a.text-decoration-none(href='#!')
+                      i.fab.fa-facebook-square.fs-2
+                  li.list-inline-item
+                    a.text-decoration-none(href='#!')
+                      i.fab.fa-instagram-square.fs-2
+                  li.list-inline-item
+                    a.text-decoration-none(href='#!')
+                      i.fab.fa-twitter-square.fs-2
+        .text-center
+          button.btn.btn-primary.px-5(type="submit")
+            i.fas.fa-phone-alt.me-2
+            a(href='tel:123-456789').text-light Call us to delivery  123-456789
+
+

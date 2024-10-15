@@ -1,0 +1,25 @@
+extends layouts/LayoutTheme
+include mixins/home/landing/HeroHeader
+include mixins/home/landing/Services
+include mixins/home/landing/FactCounter
+include mixins/home/landing/VideoSection
+include mixins/home/landing/Testimonial
+include mixins/home/landing/Callback
+include mixins/home/landing/FindUs
+include mixins/home/landing/Cta
+include mixins/home/landing/Footer
+
+
+
+prepend scripts
+  
+append content
+  +HeroHeader
+  +Services
+  +FactsCounter
+  +VideoSection
+  +Testimonial
+  +Callback
+  +FindUs
+  +Cta
+  +PreFooter

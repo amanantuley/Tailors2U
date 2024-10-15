@@ -1,0 +1,48 @@
+append variables
+  -
+    var counter= [
+      {
+        image:'awards.png',
+        number :'26+',
+        text: 'Awards  won',
+      },
+      {
+        image:'states.png',
+        number :'65+',
+        text: 'States covered',
+      },
+      {
+        image: 'clients.png',
+        number :'689K+',
+        text: 'Happy clients',
+      },
+      {
+        image: 'goods.png',
+        number :'130M+',
+        text: 'Goods delivered',
+      },
+      {
+        image: 'business.png',
+        number :'130M+',
+        text: 'Business hours',
+      },
+      
+
+    ];
+
+
+mixin Counter(config)
+  .col-6.col-lg.mb-5
+    .text-center
+      img(src=`${CWD}assets/img/icons/${config.image}` alt='...' )
+      h1.text-primary.mt-4=config.number  
+      h5.text-800=config.text
+
+mixin FactsCounter
+  +Section.pt-7.pb-0
+    .row
+      +Counter(counter[0])
+      +Counter(counter[1])
+      +Counter(counter[2])
+      +Counter(counter[3])
+      +Counter(counter[4])

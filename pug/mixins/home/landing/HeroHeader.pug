@@ -1,0 +1,15 @@
+mixin HeroHeader
+  section.py-xxl-10.pb-0#home
+    +Background({image: `${CWD}assets/img/gallery/hero-header-bg.png`, attrs: { style: { 'background-position': 'top center', 'background-size': 'cover',} }, className: 'bg-size' })
+    .container
+      .row.align-items-center
+        .col-md-5.col-xl-6.col-xxl-7.order-0.order-md-1.text-end
+          img.pt-7.pt-md-0.w-100(src=`${CWD}assets/img/illustrations/hero.png` alt='hero-header')
+        .col-md-75.col-xl-6.col-xxl-5.text-md-start.text-center.py-8
+          h1.fw-normal.fs-6.fs-xxl-7 A trusted provider of 
+          h1.fw-bolder.fs-6.fs-xxl-7.mb-2 courier services.
+          p.fs-1.mb-5 We deliver your products safely to 
+            br
+            |your home in a reasonable time.  
+          a.btn.btn-primary.me-2(href='#!' role='button') Get started
+            i.fas.fa-arrow-right.ms-2
